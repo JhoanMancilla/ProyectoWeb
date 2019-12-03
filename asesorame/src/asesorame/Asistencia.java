@@ -13,8 +13,9 @@ import javax.persistence.*;
 public class Asistencia implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@EmbeddedId
-	private AsistenciaPK id;
+	@Id
+	@Column(name="id_asistencia")
+	private int idAsistencia;
 
 	private int verificado;
 
@@ -31,12 +32,12 @@ public class Asistencia implements Serializable {
 	public Asistencia() {
 	}
 
-	public AsistenciaPK getId() {
-		return this.id;
+	public int getIdAsistencia() {
+		return this.idAsistencia;
 	}
 
-	public void setId(AsistenciaPK id) {
-		this.id = id;
+	public void setIdAsistencia(int idAsistencia) {
+		this.idAsistencia = idAsistencia;
 	}
 
 	public int getVerificado() {

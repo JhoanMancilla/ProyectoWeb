@@ -16,8 +16,8 @@ public class Asesoria implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="id_asesor")
-	private int idAsesor;
+	@Column(name="id_asesoria")
+	private int idAsesoria;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="`fecha-hora`")
@@ -27,8 +27,8 @@ public class Asesoria implements Serializable {
 
 	private int precio;
 
-	//bi-directional one-to-one association to Asesor
-	@OneToOne
+	//bi-directional many-to-one association to Asesor
+	@ManyToOne
 	@JoinColumn(name="id_asesor")
 	private Asesor asesor;
 
@@ -36,6 +36,11 @@ public class Asesoria implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="estado")
 	private EstadoAsesoria estadoAsesoria;
+
+	//bi-directional many-to-one association to Materia
+	@ManyToOne
+	@JoinColumn(name="tema")
+	private Materia materia;
 
 	//bi-directional many-to-one association to TipoAsesoria
 	@ManyToOne
@@ -49,12 +54,12 @@ public class Asesoria implements Serializable {
 	public Asesoria() {
 	}
 
-	public int getIdAsesor() {
-		return this.idAsesor;
+	public int getIdAsesoria() {
+		return this.idAsesoria;
 	}
 
-	public void setIdAsesor(int idAsesor) {
-		this.idAsesor = idAsesor;
+	public void setIdAsesoria(int idAsesoria) {
+		this.idAsesoria = idAsesoria;
 	}
 
 	public Date getFecha_hora() {
@@ -95,6 +100,14 @@ public class Asesoria implements Serializable {
 
 	public void setEstadoAsesoria(EstadoAsesoria estadoAsesoria) {
 		this.estadoAsesoria = estadoAsesoria;
+	}
+
+	public Materia getMateria() {
+		return this.materia;
+	}
+
+	public void setMateria(Materia materia) {
+		this.materia = materia;
 	}
 
 	public TipoAsesoria getTipoAsesoria() {

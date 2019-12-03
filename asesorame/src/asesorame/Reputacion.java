@@ -18,8 +18,6 @@ public class Reputacion implements Serializable {
 	@Column(name="id_reputacion")
 	private int idReputacion;
 
-	private String descripcion;
-
 	@Column(name="numero_asistencias")
 	private int numeroAsistencias;
 
@@ -42,14 +40,6 @@ public class Reputacion implements Serializable {
 
 	public void setIdReputacion(int idReputacion) {
 		this.idReputacion = idReputacion;
-	}
-
-	public String getDescripcion() {
-		return this.descripcion;
-	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
 	}
 
 	public int getNumeroAsistencias() {

@@ -32,9 +32,9 @@ public class Asesor implements Serializable {
 	@ManyToMany(mappedBy="asesors")
 	private List<Comentario> comentarios;
 
-	//bi-directional one-to-one association to Asesoria
-	@OneToOne(mappedBy="asesor")
-	private Asesoria asesoria;
+	//bi-directional many-to-one association to Asesoria
+	@OneToMany(mappedBy="asesor")
+	private List<Asesoria> asesorias;
 
 	//bi-directional many-to-many association to Materia
 	@ManyToMany(mappedBy="asesors")
@@ -75,12 +75,26 @@ public class Asesor implements Serializable {
 		this.comentarios = comentarios;
 	}
 
-	public Asesoria getAsesoria() {
-		return this.asesoria;
+	public List<Asesoria> getAsesorias() {
+		return this.asesorias;
 	}
 
-	public void setAsesoria(Asesoria asesoria) {
-		this.asesoria = asesoria;
+	public void setAsesorias(List<Asesoria> asesorias) {
+		this.asesorias = asesorias;
+	}
+
+	public Asesoria addAsesoria(Asesoria asesoria) {
+		getAsesorias().add(asesoria);
+		asesoria.setAsesor(this);
+
+		return asesoria;
+	}
+
+	public Asesoria removeAsesoria(Asesoria asesoria) {
+		getAsesorias().remove(asesoria);
+		asesoria.setAsesor(null);
+
+		return asesoria;
 	}
 
 	public List<Materia> getMaterias() {

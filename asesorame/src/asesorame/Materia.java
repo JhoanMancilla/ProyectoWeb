@@ -20,6 +20,10 @@ public class Materia implements Serializable {
 
 	private String nombre;
 
+	//bi-directional many-to-one association to Asesoria
+	@OneToMany(mappedBy="materia")
+	private List<Asesoria> asesorias;
+
 	//bi-directional many-to-many association to Aprendiz
 	@ManyToMany
 	@JoinTable(
@@ -63,6 +67,28 @@ public class Materia implements Serializable {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public List<Asesoria> getAsesorias() {
+		return this.asesorias;
+	}
+
+	public void setAsesorias(List<Asesoria> asesorias) {
+		this.asesorias = asesorias;
+	}
+
+	public Asesoria addAsesoria(Asesoria asesoria) {
+		getAsesorias().add(asesoria);
+		asesoria.setMateria(this);
+
+		return asesoria;
+	}
+
+	public Asesoria removeAsesoria(Asesoria asesoria) {
+		getAsesorias().remove(asesoria);
+		asesoria.setMateria(null);
+
+		return asesoria;
 	}
 
 	public List<Aprendiz> getAprendizs() {
