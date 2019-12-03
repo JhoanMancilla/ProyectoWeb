@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de complemento</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css">
+	<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/formulario.css">
+</head>
+<body>
+<div class="container-login100">
+	<div class="formulario">
+		<h3>¡Datos personales de Aprendiz!</h3>
+		<div class="formulario-interno">
+			<form class="row" method="GET" accept-charset="utf-8">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<label>Nombres</label>
+					<input type="text" name="nombre" placeholder="Nombres" class="form-control">
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<label>Apellidos</label>
+					<input type="text" name="apellido" placeholder="Apellidos" class="form-control">
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<label>Correo</label>
+					<input type="email" name="correo" placeholder="Ingresa el correo" class="form-control">
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<label>Fecha de nacimiento</label>
+					<input type="date" name="fecha_nac" class="form-control">
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<label>Genero</label>
+					<select class="form-control" name="genero" id="genero">
+						<option value="1">Femenino</option>
+						<option value="2">Masculino</option>
+						<option value="3">Otro</option>
+					</select>
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<label>Telefono</label>
+					<input type="text" name="telefono" placeholder="Numero de telefono sin indicativo de pais" class="form-control">
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<label>¿Pregunta de seguridad?</label>
+					<select name="pseg" class="form-control" id="pseg">
+						<option value="1">¿Cual es el nombre de mi perro?</option>
+						<option value="2">¿Como se llama mi mama?</option>
+						<option value="3">¿Donde vivo?</option>
+						<option value="4">¿Cual es mi color favorito?</option>
+						<option value="5">¿Animal favorito?</option>
+					</select>
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<label>Respuesta de seguridad</label>
+					<input type="text" name="rseg" placeholder="Pancho" class="form-control">
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<label>Materias de interes</label>
+					<select name="materias" class="form-control" id="materias" multiple>
+						<option value="Calculo">Calculo</option>
+						<option value="Fisica">Fisica</option>
+						<option value="Programacion_web">Web</option>
+						<option value="Arquitectura">Arquitectura</option>
+						<option value="Base_datos">Base de datos</option>
+					</select>
+				</div>
+				<div class="col-12">
+					<br>
+					<center>
+					<input type="submit" name="enviar" class="btn btn-success" value="Completo!">
+					</center>
+				</div>
+			</form>
+		</div>
+	</div>		
+</div>
+
+</body>
+</html>

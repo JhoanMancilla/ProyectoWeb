@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One&display=swap');
+.container-login100 {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: url(../images/fondo.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;  
+}
+.formulario{
+font-family: 'Francois One', sans-serif;
+  background:white;
+  width: 82%;
+  height: auto;
+  border: #093343 3px solid;
+  border-radius: 10px;
+}
+.formulario-interno{
+  margin-top: 4%;
+  margin-bottom: 4%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One&display=swap');
+body{
+  width: 100%;  
+  min-height: 100vh;
+  padding: 15px;
+  background: url(../images/fondo.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;  
+}
+.formulario{
+  margin-top: 5%;
+font-family: 'Francois One', sans-serif;
+  background:white;
+  width: 85%;
+  margin-left: 7.5%;
+  margin-right:7.5%;
+  height: auto;
+  border: #093343 3px solid;
+  border-radius: 10px;
+}
+.formulario-interno{
+  margin-top: 4%;
+  margin-bottom: 4%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.datos-interno{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#nombre_user{
+  font-size: 30px;
+}
+.datos{
+  font-family: 'Francois One', sans-serif;
+  background:white;
+  width: 95%;
+  height: auto;
+  margin-left: 2.5%;
+  margin-right:2.5%;
+  border: #093343 3px solid;
+  border-radius: 10px;
+}
+button,select{
+  margin-top: 2%;
+}
